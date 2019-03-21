@@ -1,0 +1,8 @@
+{% extends 'products/base.html' %}
+
+{% block content %}
+Your shorted url is <br>
+<!--http://tini.ml/-->
+this:8000/{{shorted_url}} 
+<input type="button" onclick="parent.open({{long_url}})" class="btn btn-light text-danger" value="&#8599" />
+{% endblock %}

@@ -1,0 +1,50 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>This Cat</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<style type="text/css">
+	.container{
+		border-radius: 20px;
+		height: 300px;
+		align-content:  center;
+	}
+	.btn{
+		margin-left: 20px; 	
+	}
+	#short_text_id{
+		margin-top:40px;
+	}
+</style>
+
+</head>
+<body class="bg-dark ">
+<div class="display-4 text-center mt-5 text-warning">
+	{% block content %}
+	Replace ME!
+	{% endblock %}
+</div>
+<div class=" container d-flex justify-content-center   mt-5 bg-light" style="width: 40%">
+	<div class="d-flex justify-content-center" style="width:450px">
+		<div class="d-flex mt-5 justify-items-center">
+			<form class="form" method='POST'>
+			{% csrf_token %}
+			{{ form.as_p }}
+			<div class="container ">
+				<input class="btn btn-primary mt-5" type="submit" name="save" />
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
