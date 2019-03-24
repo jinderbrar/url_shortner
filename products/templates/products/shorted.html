@@ -3,6 +3,8 @@
 {% block content %}
 Your shorted url is <br>
 <!--http://tini.ml/-->
-this:8000/{{shorted_url}} 
-<input type="button" onclick="parent.open({{long_url}})" class="btn btn-light text-danger" value="&#8599" />
+127.0.0.1:8000/{{shorted_url}} 
+<!--<a href="127.0.0.1:8000/{{shorted_url}}" target="_blank" class="btn btn-light text-danger" >&#8599 </a>-->
+<!--
+<a href='127.0.0.1:8000/{{long_url}}' target="_blank"  class="btn btn-light text-danger"><span class="display-5">&#8599</span></a>-->
 {% endblock %}
